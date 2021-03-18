@@ -1,0 +1,8 @@
+<ng-container class="grid" *ngIf="trendingGifs">
+
+  <span class="badge badge-trending">Trending Now!</span>
+
+  <app-loading *ngIf="!trendingGifs"></app-loading>
+
+  <app-gifs-panel [gifs]="trendingGifs"></app-gifs-panel>
+</ng-container>

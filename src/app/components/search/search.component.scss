@@ -1,0 +1,27 @@
+@import '../../../styles/variables';
+
+h4 {
+  text-align: center;
+  font-weight: 800;
+  font-size: 36px;
+  color: gray;
+}
+h5 {
+  font-weight: 600;
+  font-size: 28px;
+  color: gray;
+}
+
+.subcategories {
+  .badge {
+    background-color: lighten($primary-blue, 20%);
+  }
+}
+
+.suggestedGif {
+  display: flex;
+  align-items: center;
+  img {
+    width: 100%;
+  }
+}

@@ -1,0 +1,9 @@
+<ng-container>
+  <div class="grid" *ngIf="gifs">
+    <div class="col-4_sm-6" *ngFor="let gif of gifs">
+      <div class="gif-card animated fadeIn">
+          <img [src]="gif.images.downsized.url">
+      </div>
+    </div>
+  </div>
+</ng-container>

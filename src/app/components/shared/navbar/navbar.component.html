@@ -1,0 +1,24 @@
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+
+      <a class="navbar-brand" href="#">
+        <img src="assets/img/logo-2.png" width="80" height="80" alt="">
+        GIFfindr
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse navbar-search" id="navbarSupportedContent">
+        <form class="d-flex">
+          <input #search class="form-control" type="text" placeholder="Find your own GIF!">
+          <button class="btn btn-search" (click)="goToSearch(search.value)" type="submit">
+            <span class="material-icons"> search </span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</div>

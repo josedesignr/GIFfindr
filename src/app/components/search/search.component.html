@@ -1,0 +1,40 @@
+<ng-container class="grid">
+
+  <div class="col categories">
+      <span *ngFor="let category of categories; let i = index" class="badge" [ngClass]="{'badge-active': activeCategory === i}" (click)="selectCategory(i)">
+        {{category.name}}
+      </span>
+
+      <div class="subcategories" *ngIf="subcategories">
+        <span *ngFor="let subcategory of subcategories; let i = index" class="badge" (click)=searchByCategory(subcategory.name)>
+          {{subcategory.name}}
+        </span>
+      </div>
+
+  </div>
+
+  <div>
+    <app-loading *ngIf="!uniqueGif || !searchResult"></app-loading>
+  </div>
+
+  <div class="grid suggestedGif" *ngIf="uniqueGif">
+
+    <div class="col-6_sm-12">
+        <h4>{{resultSentence}}</h4>
+    </div>
+
+    <div class="col-6_sm-12">
+        <img [src]="uniqueGif.images.downsized.url">
+    </div>
+  </div>
+
+  <div *ngIf="searchResult">
+    <div class="col mt-50">
+        <h5>{{resultSubsentence}}</h5>
+    </div>
+
+    <app-gifs-panel [gifs]="searchResult"></app-gifs-panel>
+  </div>
+
+
+</ng-container>

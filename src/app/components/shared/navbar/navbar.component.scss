@@ -1,0 +1,30 @@
+@import '../../../../styles/variables';
+
+.navbar {
+  padding: 40px 0 20px 0;
+  font-weight: 800;
+  font-size: 24px;
+
+  a {
+    font-weight: 200;
+    color: $primary-blue;
+  }
+
+  &-brand {
+    font-family: 'Chango', cursive;
+  }
+
+  &-search {
+    justify-content: flex-end;
+  }
+
+  .btn-search {
+    background-color: $primary-blue;
+    color: $ultralight-gray;
+    margin: 0 2px;
+    span {
+      vertical-align: bottom;
+      font-size: 30px;
+    }
+  }
+}
