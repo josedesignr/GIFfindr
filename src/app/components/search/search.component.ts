@@ -29,7 +29,6 @@ export class SearchComponent implements OnInit {
 
     this.giphyService.getCategories().subscribe((data) => {
       this.categories = data;
-      console.log("GIF: ", data);
     });
   }
 
